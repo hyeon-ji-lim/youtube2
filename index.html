@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bootstrap 연동 유튜브 따라잡기</title>
+
+    <!--bootstrap cdn 연동-->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+
+    <!-- style. css 연동코드-->
+
+    <link href="./style.css" rel="stylesheet" type="text/css">
+
+    <link href="/index2.html">
+
+</head>
+
+<body>
+
+    <!--유사 bootstrap 변형 첨부-->
+    <!--이제 body 내부에서만 html 태그와 bootstrap 코드를 붙여넣어주면 됩니다. -->
+    <!-- 1. youtube 홈버튼 영역, 검색바 넣어주기 (bootstrap 참고), 로그인 버튼 넣어주기 (bootstrap 참고)-->
+    <nav class="navbar bg-body-tertiary">
+
+        <div class="container-fluid" >
+
+            <!--<a class="navbar-brand" href="#"></a> -->
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+            <div style="width: fit-content;"></div>
+            
+              <img src="/img/사본 -사본 -youtube.jpg" width="7%" height="7%">
+              <div style="width: fit-content;"></div>
+  
+              <div class="input-group mb-3" width="3%">
+                 <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                 <button type="button" id="button-addon2" class="btn btn-light" width=fit-content;>검색</button>
+              </div>    
+            <div>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+                <div class="offcanvas-header">
+
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+                </div>
+
+                <div class="offcanvas-body">
+
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+                    <li class="nav-item">
+
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                    <a class="nav-link" href="#">Link</a>
+
+                    </li>
+
+                    <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+                        Dropdown
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+
+                        <li>
+
+                        <hr class="dropdown-divider">
+
+                        </li>
+
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+
+                    </ul>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    
+    <hr>
+    
+
+    <!-- 2. 메뉴 버튼들 넣어주기 (bootstrap 참고)
+
+    혹은 <input type="button"> 사용해서 css 잡아줄 수도 있습니다 (학습장 2회차 수업 참조)
+
+    -->
+    <div>
+        <button type="button" class="btn btn-dark">전체</button>
+        <button type="button" class="btn btn-light">음악</button>
+        <button type="button" class="btn btn-light">게임</button>
+        <button type="button" class="btn btn-light">실시간</button>
+        <button type="button" class="btn btn-light">뉴스</button>
+        <button type="button" class="btn btn-light">액션 어드벤처 게임</button>
+        <button type="button" class="btn btn-light">최근에 업로드된 동영상</button>
+        <button type="button" class="btn btn-light">감상한 동영상</button>
+    </div>
+
+    <hr>
+    <!--3.썸네일 영역 잡아주기 (div태그와 css 엮어서 만들거나, 표(table 사용),card 형식 bootstrap에서 사용)-->
+
+    <!-- 클릭 시 다른 페이지로 이동 되게끔! <a> 태그로 감싸기. -->
+    
+    <div>
+        <div class="card" style="width: 27rem;">
+
+            <a href="/index2.html"><img src="./img/mariglod.png" class="card-img-top"></a>
+                
+            <div class="card-body">
+
+                <h5 class="card-title">아이묭-marigold</h5>
+
+                <p class="card-text">어쩔임현지</p><p>조회수 4.8만회 - 3개월 전</p>
+
+            </div>
+        </div>
+
+        
+       
+    </div>
+
+    <div>
+        
+        <div class="card" style="width: 27rem;">
+
+            <a href="/index2.html"><img src="./img/후히힣.png" class="card-img-top"></a>
+
+            <div class="card-body">
+
+                <h5 class="card-title">2023국어 6모 해설강의</h5>
+
+                <p class="card-text">국어범위왜이래</p><p>조회수 5만회 - 3개월 전</p>
+
+            </div>
+
+        </div>
+        
+    </div>
+
+    <div>
+
+        <div class="card" style="width: 27rem;" >
+
+            <a href="/index2.html"><img src="./img/제목 없음.png" class="card-img-top"></a>
+
+            <div class="card-body">
+
+                <h5 class="card-title">2023영어 6모 해설강의</h5>
+
+                <p class="card-text">첫날영어라니말도안돼</p><p>조회수 42.6만회 - 1개월 전</p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div>
+
+        <div class="card" style="width: 27rem;">
+
+            <a href="/index2.html"><img src="./img/노래.png" class="card-img-top"></a>
+
+            <div class="card-body">
+
+                <h5 class="card-title">시험만점받는노래</h5>
+
+                <p class="card-text">될대로돼라</p><p>조회수 149만회 - 1개월 전</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    
+    <!--구분선 <hr> 넣어주기--> 
+    
+    <hr>
+    
+    <!-- 4. shorts 영역 도 카드 혹은 div 태그로 박스 만들어서 넣어주기 / 힘들면 표로 넣어주셔도 돼요-->
+    
+    <div>
+        <div class="card" style="width: 18rem;">
+            <img src="./img/퇴근.png" class="card-img-top"></a>
+            <div class="card-body">
+                <p class="card-text">퇴근하고 싶은 사람이 보는 영상</p><p>조회수 121만회</p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="card" style="width: 18rem;">
+            <img src="./img/사과.png" class="card-img-top">
+            <div class="card-body">
+                <p class="card-text">사과로 알아보는 중력의 발견</p><p>조회수 1.2천회</p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="card" style="width: 18rem;">
+            <img src="./img/날먹.png" class="card-img-top">
+            <div class="card-body">
+                <p class="card-text">영상 날먹하기</p><p>조회수 85만회</p>
+            </div>
+        </div>    
+    </div>
+    
+    <div>
+        <div class="card" style="width: 18rem;">
+            <img src="./img/찐날먹.png" class="card-img-top">
+            <div class="card-body">
+                <p class="card-text">찐날먹</p><p>조회수 98만회</p>
+            </div>
+        </div>    
+    </div>
+    
+    <div>
+        <div class="card" style="width: 18rem;">
+            <img src="./img/시계.png" class="card-img-top">
+            <div class="card-body">
+                <p class="card-text">시계의 발명과 발전과정</p><p>조회수 1.3만회</p>
+            </div>
+        </div>    
+    </div>
+    
+    <!--구분선 <hr> 넣어주기-->
+    <hr>
+
+    <!-- 5. 썸네일 영역 다시 잡아주기 (위와 동일)-->
+    <div>
+        <div class="card" style="width: 27rem;">
+
+            <a href="/index2.html"><img src="./img/날먹풀.png" class="card-img-top"></a>
+                
+            <div class="card-body">
+
+                <h5 class="card-title">노양심 날먹영상 풀버전</h5>
+
+                <p class="card-text">어쩔임현지</p><p>조회수 59만회 - 1개월 전</p>
+
+            </div>
+        </div>
+
+        
+       
+    </div>
+
+    <div>
+        
+        <div class="card" style="width: 27rem;">
+
+            <a href="/index2.html"><img src="./img/찐날먹풀.png" class="card-img-top"></a>
+
+            <div class="card-body">
+
+                <h5 class="card-title">찐노양심 찐날먹영상 ㅍㅂㅈ</h5>
+
+                <p class="card-text">어쩔임현지</p><p>조회수 83만회 - 1개월 전</p>
+
+            </div>
+
+        </div>
+        
+    </div>
+
+    <div>
+
+        <div class="card" style="width: 27rem;" >
+
+            <a href="/index2.html"><img src="./img/제목 없음.png" class="card-img-top"></a>
+
+            <div class="card-body">
+
+                <h5 class="card-title">아이묭 마리골드 해석+일본어 자막+발음</h5>
+
+                <p class="card-text">assertive</p><p>조회수 42.6만회 - 1개월 전</p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div>
+
+        <div class="card" style="width: 27rem;">
+
+            <a href="/index2.html"><img src="./img/노래.png" class="card-img-top"></a>
+
+            <div class="card-body">
+
+                <h5 class="card-title">시험만점받는노래</h5>
+
+                <p class="card-text">될대로돼라</p><p>조회수 149만회 - 1개월 전</p>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+
+</body>
+
+</html>
